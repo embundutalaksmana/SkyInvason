@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.Team7.Skyinvasion.ui.menu.views.logo.LogoTextView
+            android:id="@+id/logoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:padding="24dp"
+            android:text="@string/app_name"
+            android:textColor="@color/secondaryFontColor"
+            android:textSize="@dimen/menu_logo_text_size"
+            android:textStyle="italic|bold"
+            app:fontFamily="@font/determination_mono" />
+
+    </FrameLayout>
+
+
+    <com.Team7.Skyinvasion.ui.menu.views.buttons.MenuButtonView
+        android:id="@+id/btn_start"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start_game"
+        app:layout_constraintBottom_toTopOf="@+id/btn_view_scores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <com.Team7.Skyinvasion.ui.menu.views.buttons.MenuButtonView
+        android:id="@+id/btn_view_scores"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/view_scores"
+        app:layout_constraintBottom_toTopOf="@+id/btn_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <com.Team7.Skyinvasion.ui.menu.views.buttons.MenuButtonView
+        android:id="@+id/btn_exit"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_view_scores"
+        app:layout_constraintWidth_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

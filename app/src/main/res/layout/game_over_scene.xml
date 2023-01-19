@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/died_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:letterSpacing="0.1"
+        android:text="@string/game_over"
+        android:textAlignment="center"
+        android:textColor="@color/secondaryFontColor"
+        android:textSize="@dimen/text_44_size"
+        app:fontFamily="@font/determination_mono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+
+    <TextView
+        android:id="@+id/died_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:letterSpacing="0.1"
+        android:lineSpacingMultiplier="1.1"
+        android:textAlignment="center"
+        android:textColor="@color/shipShadowColor"
+        android:textSize="20sp"
+        app:fontFamily="@font/determination_mono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/died_text"
+        app:layout_constraintWidth_percent="0.75" />
+
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:letterSpacing="0.1"
+        android:text="@string/score_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:fontFamily="@font/determination_mono"
+        app:layout_constraintBottom_toTopOf="@+id/died_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.Team7.Skyinvasion.ui.menu.views.buttons.MenuButtonView
+        android:id="@+id/btn_try_again"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"
+        app:layout_constraintBottom_toTopOf="@id/btn_main_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/died_subtitle"
+        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.6" />
+
+
+    <com.Team7.Skyinvasion.ui.menu.views.buttons.MenuButtonView
+        android:id="@+id/btn_main_menu"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/back_to_main_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_try_again"
+        app:layout_constraintWidth_percent="0.6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
